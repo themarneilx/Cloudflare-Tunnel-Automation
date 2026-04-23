@@ -44,7 +44,7 @@ WantedBy=multi-user.target
    ```curl -O https://raw.githubusercontent.com/themarneilx/Cloudflare-Tunnel-Automation/main/create-tunnel.sh```
 
 2. Make the script executable:  
-  ```chmod \+x create-tunnel.sh```
+  ```chmod +x create-tunnel.sh```
 
 ## **Usage**
 
