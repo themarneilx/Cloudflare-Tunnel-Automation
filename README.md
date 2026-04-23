@@ -24,22 +24,25 @@ If you want to run multiple tunnels on one server without dealing with messy def
    After=network.target network-online.target  
    Wants=network-online.target
 
-   \[Service\]  
-   Type=notify  
-   ExecStart=/usr/bin/cloudflared tunnel \--config /etc/cloudflared/%i.yml run  
-   Restart=always  
-   RestartSec=5s  
-   DynamicUser=yes  
-   CapabilityBoundingSet=CAP\_NET\_BIND\_SERVICE  
-   AmbientCapabilities=CAP\_NET\_BIND\_SERVICE  
-   NoNewPrivileges=true
+```   
+[Unit]
+Description=Cloudflare Tunnel for %I
+After=network.target network-online.target
+Wants=network-online.target
 
-   \[Install\]  
-   WantedBy=multi-user.target
+[Service]
+Type=notify
+ExecStart=/usr/bin/cloudflared tunnel --config /etc/cloudflared/%i.yml run
+Restart=always
+RestartSec=5s
+DynamicUser=yes
+CapabilityBoundingSet=CAP_NET_BIND_SERVICE
+AmbientCapabilities=CAP_NET_BIND_SERVICE
+NoNewPrivileges=true
 
-   Then, reload the systemd daemon:  
-   sudo systemctl daemon-reload
-
+[Install]
+WantedBy=multi-user.target
+```
 ## **Installation**
 
 1. Clone this repository or download the script:  
