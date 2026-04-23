@@ -19,11 +19,6 @@ If you want to run multiple tunnels on one server without dealing with messy def
    sudo nano /etc/systemd/system/cloudflared@.service
 
    Paste the following configuration:  
-   \[Unit\]  
-   Description=Cloudflare Tunnel for %I  
-   After=network.target network-online.target  
-   Wants=network-online.target
-
 ```   
 [Unit]
 Description=Cloudflare Tunnel for %I
