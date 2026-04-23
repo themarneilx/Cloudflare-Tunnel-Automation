@@ -16,7 +16,7 @@ If you want to run multiple tunnels on one server without dealing with messy def
 1. **cloudflared installed**: Make sure the Cloudflare daemon is installed on your machine.  
 2. **sudo privileges**: The script needs to move files to /etc/cloudflared/ and reload systemd daemons.  
 3. **Systemd Template Unit**: This script relies on a template service. Before using the script, create the template:  
-   sudo nano /etc/systemd/system/cloudflared@.service
+   `sudo nano /etc/systemd/system/cloudflared@.service`
 
    Paste the following configuration:  
 ```   
@@ -41,15 +41,15 @@ WantedBy=multi-user.target
 ## **Installation**
 
 1. Clone this repository or download the script:  
-   curl \-O \[https://raw.githubusercontent.com/YOUR\_USERNAME/YOUR\_REPO/main/create-tunnel.sh\](https://raw.githubusercontent.com/YOUR\_USERNAME/YOUR\_REPO/main/create-tunnel.sh)
+   `curl \-O \[https://raw.githubusercontent.com/YOUR\_USERNAME/YOUR\_REPO/main/create-tunnel.sh\](https://raw.githubusercontent.com/YOUR\_USERNAME/YOUR\_REPO/main/create-tunnel.sh)`
 
 2. Make the script executable:  
-   chmod \+x create-tunnel.sh
+  ` chmod \+x create-tunnel.sh`
 
 ## **Usage**
 
 Run the script from your terminal:  
-./create-tunnel.sh
+`./create-tunnel.sh`
 
 ### **Example Walkthrough**
 
