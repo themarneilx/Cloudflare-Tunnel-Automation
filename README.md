@@ -41,7 +41,7 @@ WantedBy=multi-user.target
 ## **Installation**
 
 1. Clone this repository or download the script:  
-   `curl \-O \[https://raw.githubusercontent.com/YOUR\_USERNAME/YOUR\_REPO/main/create-tunnel.sh\](https://raw.githubusercontent.com/YOUR\_USERNAME/YOUR\_REPO/main/create-tunnel.sh)`
+   `curl \-O \[https://raw.githubusercontent.com/themarneilx/Cloudflare-Tunnel-Automation/main/create-tunnel.sh\](https://raw.githubusercontent.com/themarneilx/Cloudflare-Tunnel-Automation/main/create-tunnel.sh)`
 
 2. Make the script executable:  
   ` chmod \+x create-tunnel.sh`
